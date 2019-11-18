@@ -281,6 +281,7 @@
     [:distinct    arg]   (tru "Distinct values of {0}"  (aggregation-arg-display-name inner-query arg))
     [:count       arg]   (tru "Count of {0}"            (aggregation-arg-display-name inner-query arg))
     [:avg         arg]   (tru "Average of {0}"          (aggregation-arg-display-name inner-query arg))
+    [:median      arg]   (tru "Median of {0}"           (aggregation-arg-display-name inner-query arg))
     ;; cum-count and cum-sum get names for count and sum, respectively (see explanation in `aggregation-name`)
     [:cum-count   arg]   (tru "Count of {0}"            (aggregation-arg-display-name inner-query arg))
     [:cum-sum     arg]   (tru "Sum of {0}"              (aggregation-arg-display-name inner-query arg))

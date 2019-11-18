@@ -488,6 +488,15 @@ const AGGREGATION_OPERATORS = [
     requiredDriverFeature: "basic-aggregations",
   },
   {
+    short: "median",
+    name: `Median of ...`,
+    columnName: `Median`,
+    description: `Median of all the values of a column`,
+    validFieldsFilters: [summableFields],
+    requiresField: true,
+    requiredDriverFeature: "basic-aggregations",
+  },
+  {
     short: "distinct",
     name: t`Number of distinct values of ...`,
     columnName: t`Distinct values`,

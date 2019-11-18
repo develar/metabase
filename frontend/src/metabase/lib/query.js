@@ -53,6 +53,7 @@ const METRIC_NAME_BY_AGGREGATION = {
   "cum-sum": "sum",
   distinct: "count",
   avg: "avg",
+  median: "median",
   min: "min",
   max: "max",
 };
@@ -64,12 +65,14 @@ const METRIC_TYPE_BY_AGGREGATION = {
   "cum-sum": TYPE.Float,
   distinct: TYPE.Integer,
   avg: TYPE.Float,
+  median: TYPE.Float,
   min: TYPE.Float,
   max: TYPE.Float,
 };
 
 const SORTABLE_AGGREGATION_TYPES = new Set([
   "avg",
+  "median",
   "count",
   "distinct",
   "stddev",
@@ -303,6 +306,11 @@ export function getAggregationDescription(tableMetadata, query, options) {
         case "avg":
           return [
             t`Average of `,
+            getFieldName(tableMetadata, aggregation[1], options),
+          ];
+        case "median":
+          return [
+            `Median of `,
             getFieldName(tableMetadata, aggregation[1], options),
           ];
         case "distinct":

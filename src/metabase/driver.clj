@@ -508,6 +508,9 @@
     ;; Does this driver support standard deviation aggregations?
     :standard-deviation-aggregations
 
+    ;; Does this driver support quantile aggregations?
+    :quantile-aggregations
+
     ;; Does this driver support expressions (e.g. adding the values of 2 columns together)?
     :expressions
 

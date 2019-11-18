@@ -241,6 +241,7 @@
     :%count.*))
 
 (defmethod ->honeysql [:sql :avg]      [driver [_ field]] (hsql/call :avg            (->honeysql driver field)))
+(defmethod ->honeysql [:sql :median]   [driver [_ field]] (hsql/call :median         (->honeysql driver field)))
 (defmethod ->honeysql [:sql :distinct] [driver [_ field]] (hsql/call :distinct-count (->honeysql driver field)))
 (defmethod ->honeysql [:sql :stddev]   [driver [_ field]] (hsql/call :stddev         (->honeysql driver field)))
 (defmethod ->honeysql [:sql :sum]      [driver [_ field]] (hsql/call :sum            (->honeysql driver field)))

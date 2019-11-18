@@ -9,6 +9,7 @@ export type DatabaseFeature =
   | "basic-aggregations"
   | "standard-deviation-aggregations"
   | "expression-aggregations"
+  | "quantile-aggregations"
   | "foreign-keys"
   | "native-parameters"
   | "nested-queries"

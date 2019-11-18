@@ -126,6 +126,7 @@ export function computeSplit(extents, left = [], right = []) {
 
 const AGGREGATION_NAME_MAP = {
   avg: t`Average`,
+  median: `Median`,
   count: t`Count`,
   sum: t`Sum`,
   distinct: t`Distinct`,

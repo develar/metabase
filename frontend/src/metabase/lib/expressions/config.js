@@ -11,6 +11,7 @@ export const VALID_AGGREGATIONS = new Map(
     distinct: t`Distinct`,
     stddev: t`StandardDeviation`,
     avg: t`Average`,
+    median: `Median`,
     min: t`Min`,
     max: t`Max`,
   }),
@@ -23,6 +24,7 @@ export const UNARY_AGGREGATIONS = [
   "distinct",
   "stddev",
   "avg",
+  "median",
   "min",
   "max",
 ];
